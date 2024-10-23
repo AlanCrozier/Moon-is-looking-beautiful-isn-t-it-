@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Say Yes?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: pink;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ff3366;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            margin: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+
+        button.yes {
+            background-color: #28a745;
+            color: white;
+        }
+
+        button.no {
+            background-color: #dc3545;
+            color: white;
+            position: relative;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        #response {
+            margin-top: 30px;
+            font-size: 2rem;
+            color: #ff3366;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>sath mein banaras chalogi pookie &#127872;?</h1>
+        <p class="message">There's no escape! You have to say yes! 😊</p>
+        <div class="buttons">
+            <button class="yes" onclick="sayYes()">Yes</button>
+            <button class="no" id="noButton" onmouseover="moveNoButton()">No</button>
+        </div>
+        <p id="response"></p>
+    </div>
+
+    <script>
+        // Function to move the "No" button away when the user hovers over it
+        function moveNoButton() {
+            const noButton = document.getElementById('noButton');
+            const containerWidth = document.querySelector('.container').clientWidth;
+            const containerHeight = document.querySelector('.container').clientHeight;
+
+            const randomX = Math.floor(Math.random() * (containerWidth - noButton.clientWidth));
+            const randomY = Math.floor(Math.random() * (containerHeight - noButton.clientHeight));
+
+            noButton.style.position = 'absolute';
+            noButton.style.left = randomX + 'px';
+            noButton.style.top = randomY + 'px';
+        }
+
+        // Function to handle the "Yes" button click
+        function sayYes() {
+            const response = document.getElementById('response');
+            response.textContent = "pata tha !";
+        }
+    </script>
+</body>
+</html>
