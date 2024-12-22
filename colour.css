@@ -1,0 +1,30 @@
+body{
+    background-color: antiquewhite;
+}
+.b1{
+    background-color: aqua;
+    color: black;
+    margin: 1px;
+    margin-left: 200px;
+}
+.b1:hover{
+    background-color: pink;
+}
+.b2{
+    margin-left: 300px;
+    background-color:aqua;
+    margin: 1px;
+}
+.b2{
+    background-color: blue;
+}
+.b3{
+    margin-left: 600px;
+    background-color: aqua;
+    color: black;
+    margin: 1px;
+}
+.b3:hover{
+    background-color: violet;
+}
+
